@@ -1,0 +1,85 @@
+/* * Importing fornt * */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap");
+
+/* * Remove outlines * */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+/* * Remove number input arrows * */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+/* * ScrollBar * */
+
+/* * Defaults * */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	line-height: 1.4;
+}
+
+.app {
+	height: 100vh;
+	overflow-y: scroll;
+	margin: 0 auto;
+}
+
+/* .app::-webkit-scrollbar-track {
+	border-radius: 20px;
+	background-color: transparent;
+}
+
+.app::-webkit-scrollbar {
+	width: 5px;
+}
+
+.app::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background-color: #f2f2f2;
+} */
+
+.app::-webkit-scrollbar {
+	display: none;
+}

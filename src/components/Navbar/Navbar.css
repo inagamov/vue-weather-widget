@@ -1,0 +1,60 @@
+.navbar {
+	display: flex;
+	margin: 40px auto;
+	width: 620px;
+	position: sticky;
+	z-index: 1;
+	top: 0;
+}
+
+.navbar__sticked {
+	padding: 0px 0;
+}
+
+.navbar__sticked > .navbar__content {
+	border-radius: 0 0 20px 20px;
+	border-top: none;
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(8px);
+}
+
+.navbar__content {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid #edebe9;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.navbar__content__title {
+	font-weight: 500;
+}
+
+.navbar__content__settings_icon {
+	min-width: 20px;
+	max-width: 20px;
+	min-height: 20px;
+	max-height: 20px;
+	margin: auto 0;
+	margin-left: 20px;
+	cursor: pointer;
+	animation: rotation 10s infinite ease-in-out;
+}
+
+@keyframes rotation {
+	0%,
+	90% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.navbar {
+		width: calc(100% - 40px);
+	}
+}

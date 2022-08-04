@@ -1,0 +1,121 @@
+.weather_board {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 620px;
+	margin: 0 auto;
+	animation: fadeIn 0.275s ease-in-out;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Card */
+.weather_board__card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	width: 300px;
+	border-radius: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.weather_board__card__background_image {
+	object-fit: cover;
+	background-size: cover cover;
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.5;
+	filter: brightness(70%);
+}
+
+/* Title */
+.weather_board__card__location_title {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.weather_board__card__location_title p {
+	font-weight: 500;
+	font-size: 18px;
+	margin-right: 5px;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.weather_board__card__location_title img {
+	margin: auto 0;
+}
+
+/* Main temperature */
+.weather_board__card__main_temperature {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.weather_board__card__main_temperature p {
+	font-size: 48px;
+	line-height: 100px;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.weather_board__card__description {
+	text-align: center;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Divider */
+.weather_board__card__divider {
+	border: none;
+	width: 100%;
+	height: 1px;
+	background: #edebe9;
+	opacity: 0.5;
+	margin-top: 20px;
+}
+
+/* Other data */
+.weather_board__card__other {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.weather_board__card__other > div {
+	display: flex;
+	width: 50%;
+	margin-top: 10px;
+}
+
+.weather_board__card__other svg {
+	width: 20px;
+	height: 20px;
+	fill: #edebe9;
+	margin-right: 5px;
+}
+
+@media screen and (max-width: 660px) {
+	.weather_board {
+		width: calc(100% - 40px);
+	}
+	.weather_board__card {
+		width: 100%;
+	}
+}
