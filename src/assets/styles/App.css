@@ -1,7 +1,7 @@
-/* * Importing fornt * */
+/* Import font */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap");
 
-/* * Remove outlines * */
+/* Remove outlines */
 input:focus,
 select:focus,
 textarea:focus,
@@ -13,7 +13,7 @@ button:focus {
 	outline: none;
 }
 
-/* * Remove number input arrows * */
+/* Remove number input arrows */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
@@ -24,9 +24,7 @@ input[type="number"] {
 	-moz-appearance: textfield;
 }
 
-/* * ScrollBar * */
-
-/* * Defaults * */
+/* Defaults */
 * {
 	margin: 0;
 	padding: 0;

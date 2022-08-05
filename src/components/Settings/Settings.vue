@@ -5,7 +5,7 @@
 
 		<!-- Content -->
 		<div class="settings__content">
-			<!-- Title -->
+			<!-- Header -->
 			<h1>Settings.</h1>
 			<svg class="settings__content__close_button" @click="closeSettings()" viewBox="0 0 311 311.07733">
 				<path
@@ -16,7 +16,7 @@
 				/>
 			</svg>
 
-			<!-- Content -->
+			<!-- Body -->
 			<LocationsList></LocationsList>
 			<AddLocation></AddLocation>
 		</div>
@@ -24,19 +24,23 @@
 </template>
 
 <script>
-import AddLocation from "./AddLocation.vue";
-import LocationsList from "./LocationsList.vue";
+import AddLocation from "./AddLocation/AddLocation.vue";
+import LocationsList from "./LocationsList/LocationsList.vue";
 
 export default {
-	components: {AddLocation, LocationsList},
+	components: {
+		AddLocation,
+		LocationsList,
+	},
 
 	methods: {
 		closeSettings() {
 			document.getElementsByClassName("settings__content")[0].style.animation = "fadeOut_slideDown 0.275s ease-in-out";
 			document.getElementsByClassName("settings__mask")[0].style.animation = "fadeOut 0.275s ease-in-out";
 
+			// Wait for animations to end, then emit
 			setTimeout(() => {
-				this.$emit("toggleSettingsVisibility");
+				this.$emit("closeSettings");
 			}, 275);
 		},
 	},

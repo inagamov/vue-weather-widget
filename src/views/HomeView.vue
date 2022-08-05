@@ -1,21 +1,23 @@
 <template>
 	<div class="app">
-		<settings v-if="settingsVisibility" @toggleSettingsVisibility="toggleSettingsVisibility()"></settings>
+		<!-- Settings -->
+		<settings v-if="settingsVisibility" @closeSettings="toggleSettingsVisibility()"></settings>
+		<navbar @openSettings="toggleSettingsVisibility()"></navbar>
 
-		<navbar @toggleSettingsVisibility="toggleSettingsVisibility()"></navbar>
-
-		<board v-if="!loading"></board>
-		<loader v-else></loader>
+		<!-- Content -->
+		<loader v-if="loading"></loader>
+		<board v-else></board>
 	</div>
 </template>
 
 <script>
 import {mapGetters} from "vuex";
 
+// Components
 import Settings from "../components/Settings/Settings.vue";
 import Board from "../components/Board/Board.vue";
 import Navbar from "../components/Navbar/Navbar.vue";
-import Loader from "@/components/Loader/Loader.vue";
+import Loader from "../components/Loader/Loader.vue";
 
 export default {
 	name: "HomeView",
@@ -51,15 +53,11 @@ export default {
 
 		onScrollListener() {
 			let app = document.getElementsByClassName("app")[0];
+			let navbar = document.getElementsByClassName("navbar")[0];
 
 			app.addEventListener("scroll", function () {
-				let navbar = document.getElementsByClassName("navbar")[0];
-
-				if (app.scrollTop > 20) {
-					navbar.classList.add("navbar__sticked");
-				} else {
-					navbar.classList.remove("navbar__sticked");
-				}
+				// Toggle sticked class depending on scroll position
+				app.scrollTop > 20 ? navbar.classList.add("navbar__sticked") : navbar.classList.remove("navbar__sticked");
 			});
 		},
 	},

@@ -19,12 +19,15 @@
 				<p>{{ Math.round(item.main.temp) }}°C</p>
 			</div>
 
-			<!-- Description -->
+			<!-- Feels like -->
 			<p class="weather_board__card__description">Feels like {{ Math.round(item.main.feels_like) }}°C.</p>
+
+			<!-- Descriptions -->
 			<p class="weather_board__card__description" v-for="weather in item.weather" :key="weather.id">
 				{{ weather.description.charAt(0).toUpperCase() + weather.description.slice(1) }}.
 			</p>
 
+			<!-- Divider -->
 			<hr class="weather_board__card__divider" />
 
 			<!-- Other data -->
@@ -82,7 +85,7 @@
 			<img
 				class="weather_board__card__background_image"
 				:src="require(`../../assets/img/weather/${item.weather[0].main.toLowerCase()}.jpg`)"
-				alt=""
+				:alt="item.weather[0].main"
 			/>
 		</div>
 	</div>

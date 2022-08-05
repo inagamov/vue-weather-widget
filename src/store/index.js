@@ -36,10 +36,12 @@ export default createStore({
 			state.weather.splice(index, 1);
 		},
 
-		SWAP_WEATHER(state, data) {
-			let temp = state.weather[data.startIndex];
-			state.weather[data.startIndex] = state.weather[data.endIndex];
-			state.weather[data.endIndex] = temp;
+		SWAP_WEATHER(state, indexes) {
+			let {startIndex, endIndex} = indexes;
+
+			let temp = state.weather[startIndex];
+			state.weather[startIndex] = state.weather[endIndex];
+			state.weather[endIndex] = temp;
 		},
 
 		SET_LOADING(state, value) {
@@ -58,6 +60,7 @@ export default createStore({
 			if (!state.locations[0]) {
 				commit("SET_LOADING", true);
 
+				// Fetch user location
 				await dispatch("fetchUserLocaiton").then((user_location) => {
 					let locations = [{id: new Date(), city: user_location.city, country: user_location.country}];
 					dispatch("setLocalStorageLocations", locations);
@@ -66,6 +69,7 @@ export default createStore({
 				});
 			}
 
+			// Load weather data after checking locations
 			dispatch("loadData");
 		},
 
