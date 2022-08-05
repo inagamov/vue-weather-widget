@@ -4,9 +4,9 @@
 	flex-wrap: wrap;
 	width: 620px;
 	margin: 0 auto;
-	animation: fadeIn 0.275s ease-in-out;
 }
 
+/* Card */
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -16,7 +16,6 @@
 	}
 }
 
-/* Card */
 .weather_board__card {
 	position: relative;
 	overflow: hidden;
@@ -32,6 +31,7 @@
 	padding: 20px;
 
 	color: #ffffff;
+	animation: fadeIn 0.275s ease-in-out;
 }
 
 .weather_board__card__background_image {
