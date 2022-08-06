@@ -60,3 +60,9 @@
 		width: calc(100% - 40px);
 	}
 }
+
+@media screen and (max-width: 400px) {
+	.navbar {
+		width: 100%;
+	}
+}
