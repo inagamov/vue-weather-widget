@@ -4,13 +4,29 @@
 
 Main screen             |  Settings
 :-------------------------:|:-------------------------:
-![image](https://user-images.githubusercontent.com/69040554/183031744-f9f625b8-0ce6-4c5d-8566-6caca02c500e.png)  |  ![image](https://user-images.githubusercontent.com/69040554/183032398-6af9af3a-2977-4668-b423-7ca2f1eb115e.png)
+![image](https://user-images.githubusercontent.com/69040554/183245278-c2a07198-d54e-44c5-a08e-4d2e13a1ce64.png)  |  ![image](https://user-images.githubusercontent.com/69040554/183245320-895fa497-b212-4e68-8d08-be10040d78ac.png)
 
 Technical specification: https://plumsailteam.sharepoint.com/:w:/s/recruitment/EfN6xudVCOBLheWof-8S9vYB4lMxNaKRiJfm9GEugQsjnQ?rtime=uynXK6x22kg
 
+## 📍 Demo.
+
+> https://inagamov.github.io/vue-weather-widget/
+
 ## 📍 Setup (for users).
 
-1. <script type="text/javascript" src=""></script>
+Just <b>copy & paste</b> this code snippet into your project to use this widget!
+
+```
+<iframe
+	width="680"
+	height="460"
+	src="https://inagamov.github.io/vue-weather-widget/"
+	title="Weather Widget"
+	frameborder="0"
+	allow="accelerometer; clipboard-write; picture-in-picture"
+	allowfullscreen
+></iframe>
+```
 
 ## 📍 Setup (for developers).
 
