@@ -129,9 +129,3 @@
 		width: 100%;
 	}
 }
-
-@media screen and (max-width: 400px) {
-	.weather_board {
-		width: 100%;
-	}
-}
