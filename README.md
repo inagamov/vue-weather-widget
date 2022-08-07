@@ -6,8 +6,6 @@ Main screen             |  Settings
 :-------------------------:|:-------------------------:
 ![image](https://user-images.githubusercontent.com/69040554/183245278-c2a07198-d54e-44c5-a08e-4d2e13a1ce64.png)  |  ![image](https://user-images.githubusercontent.com/69040554/183245320-895fa497-b212-4e68-8d08-be10040d78ac.png)
 
-Technical specification: https://plumsailteam.sharepoint.com/:w:/s/recruitment/EfN6xudVCOBLheWof-8S9vYB4lMxNaKRiJfm9GEugQsjnQ?rtime=uynXK6x22kg
-
 ## 📍 Demo.
 
 > https://inagamov.github.io/vue-weather-widget/
