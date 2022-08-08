@@ -12,6 +12,8 @@ Main screen             |  Settings
 
 > https://inagamov.github.io/vue-weather-widget/
 
+<br/>
+
 ## 📍 Setup (for users).
 
 Just <b>copy & paste</b> this code snippet into your project to use this widget!
@@ -27,6 +29,8 @@ Just <b>copy & paste</b> this code snippet into your project to use this widget!
 	allowfullscreen
 ></iframe>
 ```
+
+<br/>
 
 ## 📍 Setup (for developers).
 
