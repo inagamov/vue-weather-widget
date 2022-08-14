@@ -1,4 +1,6 @@
 .settings__content__new_location {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -9,6 +11,8 @@
 
 .settings__content__new_location__fields > div {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin-top: 10px;
 }
@@ -24,6 +28,8 @@
 	width: 20px;
 	height: 20px;
 	fill: #000000;
+	-webkit-transition: 0.275s;
+	-o-transition: 0.275s;
 	transition: 0.275s;
 }
 
@@ -33,6 +39,7 @@
 
 .settings__content__new_location__icon__error {
 	fill: #db4437;
+	-webkit-animation: shakeIcon 0.5s ease-in-out;
 	animation: shakeIcon 0.5s ease-in-out;
 }
 
@@ -44,6 +51,8 @@
 	border: 1px solid #edebe9;
 	border-radius: 10px;
 	font-size: 16px;
+	-webkit-transition: 0.275s;
+	-o-transition: 0.275s;
 	transition: 0.275s;
 }
 
@@ -59,7 +68,31 @@
 .settings__content__new_location__input__error,
 .settings__content__new_location__input__error:focus {
 	border: 1px solid #db4437;
+	-webkit-animation: shakeInput 0.5s ease-in-out;
 	animation: shakeInput 0.5s ease-in-out;
+}
+
+@-webkit-keyframes shakeInput {
+	0% {
+		margin-left: -5px;
+		margin-right: 5px;
+	}
+	25% {
+		margin-left: 5px;
+		margin-right: -5px;
+	}
+	50% {
+		margin-left: -5px;
+		margin-right: 5px;
+	}
+	75% {
+		margin-left: 5px;
+		margin-right: -5px;
+	}
+	100% {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 @keyframes shakeInput {
@@ -82,6 +115,24 @@
 	100% {
 		margin-left: 0;
 		margin-right: 0;
+	}
+}
+
+@-webkit-keyframes shakeIcon {
+	0% {
+		left: 5px;
+	}
+	25% {
+		left: 15px;
+	}
+	50% {
+		margin-left: -5px;
+	}
+	75% {
+		margin-left: 5px;
+	}
+	100% {
+		left: 10px;
 	}
 }
 
@@ -113,6 +164,8 @@
 	font-size: 20px;
 
 	cursor: pointer;
+	-webkit-transition: 0.275s;
+	-o-transition: 0.275s;
 	transition: 0.275s;
 }
 
@@ -125,5 +178,6 @@
 .settings__content__error_message {
 	padding-top: 10px;
 	color: #db4437;
+	-webkit-animation: fadeIn 0.275s ease-in-out;
 	animation: fadeIn 0.275s ease-in-out;
 }

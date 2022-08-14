@@ -3,6 +3,10 @@
 	z-index: 1;
 	top: 0;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
 	width: 620px;
 	margin: 40px auto;
@@ -18,11 +22,16 @@
 }
 
 .navbar__content {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	width: 100%;
 	border: 1px solid #edebe9;
 	background: rgba(255, 255, 255, 0.8);
+	-webkit-backdrop-filter: blur(8px);
 	backdrop-filter: blur(8px);
 	border-radius: 20px;
 	padding: 20px;
@@ -40,16 +49,32 @@
 	margin: auto 0;
 	margin-left: 20px;
 	cursor: pointer;
+	-webkit-animation: rotation 10s infinite ease-in-out;
 	animation: rotation 10s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotation {
+	0%,
+	90% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes rotation {
 	0%,
 	90% {
+		-webkit-transform: rotate(0);
 		transform: rotate(0);
 	}
 
 	100% {
+		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
 }
