@@ -33,7 +33,7 @@
 			<!-- Other data -->
 			<div class="weather_board__card__other">
 				<!-- Pressure -->
-				<div>
+				<div title="Pressure">
 					<svg viewBox="0 0 1000 1000">
 						<g>
 							<path
@@ -45,7 +45,7 @@
 				</div>
 
 				<!-- Humidity -->
-				<div>
+				<div title="Humidity percentage">
 					<svg viewBox="0 0 1000 1000">
 						<g>
 							<path
@@ -57,7 +57,7 @@
 				</div>
 
 				<!-- Visibility -->
-				<div>
+				<div title="Visibility">
 					<svg viewBox="0 0 1000 1000">
 						<g>
 							<path
@@ -69,7 +69,7 @@
 				</div>
 
 				<!-- Wind -->
-				<div>
+				<div title="Wind speed">
 					<svg viewBox="0 0 1000 1000">
 						<g>
 							<path
