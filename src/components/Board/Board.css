@@ -48,8 +48,13 @@
 
 	opacity: 0.8;
 	filter: brightness(80%);
+	transition: 0.275s;
 
 	pointer-events: none;
+}
+
+.weather_board__card:hover .weather_board__card__background_image {
+	transform: scale(1.05);
 }
 
 /* Title */
@@ -75,6 +80,7 @@
 	display: flex;
 	justify-content: center;
 	gap: 10px;
+	transition: 0.275s;
 }
 
 .weather_board__card__main_temperature p {
