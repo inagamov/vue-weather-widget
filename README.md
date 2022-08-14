@@ -32,14 +32,16 @@ Just <b>copy & paste</b> this code snippet into your project to use this widget!
 
 ## 📍 Setup (for developers).
 
-1. Create `.env` file in the root folder.
+1. Download the repository.
 
-2. Add two variables to `.env` file: <br/>
+2. Create `.env` file in the root folder.
+
+3. Add two variables to `.env` file: <br/>
 `VUE_APP_OPEN_WEATHER_API_KEY` - [OpenWeather API](https://openweathermap.org/api) key.<br/>
 `VUE_APP_IPINFO_TOKEN` - [ipinfo](https://ipinfo.io/) token.
 
-3. Run `npm install` from the root folder.
+4. Run `npm install` from the root folder.
 
-4.1. To launch in development mode, run `npm run serve`.
+5.1. To launch in development mode, run `npm run serve`.
 
-4.2. To build for production, run `npm run build`.
+5.2. To build for production, run `npm run build`.
