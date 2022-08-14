@@ -203,19 +203,19 @@ export default {
 			this.new_location.country.complete = false;
 
 			// Country input value
-			const country = this.new_location.country.text;
+			const country = this.new_location.country.text.trim();
 
 			// Country input is not empty
 			if (!this.isEmptyOrSpaces(country)) {
-				for (const country in this.autocomplete_locations) {
-					if (country.toLowerCase().includes(country.toLowerCase())) {
+				for (const autocomplete_country in this.autocomplete_locations) {
+					if (autocomplete_country.toLowerCase().includes(country.toLowerCase())) {
 						// Country name is not complete
-						if (country.length != country.length) {
+						if (autocomplete_country.length != country.length) {
 							let start_index = country.length;
-							let end_index = country.length;
+							let end_index = autocomplete_country.length;
 
 							// Change country input
-							this.new_location.country.text = country + country.slice(start_index, end_index);
+							this.new_location.country.text = country + autocomplete_country.slice(start_index, end_index);
 
 							// Select autocompletion part of country input so user can change it in case of not matching
 							setTimeout(() => {
@@ -243,13 +243,13 @@ export default {
 
 			// Country & city inputs are not empty
 			if (!this.isEmptyOrSpaces(this.new_location.country.text) && !this.isEmptyOrSpaces(city)) {
-				for (const country in this.autocomplete_locations) {
-					if (country == this.new_location.country.text) {
-						for (const city_id in this.autocomplete_locations[country]) {
-							let city = this.autocomplete_locations[country][city_id];
+				for (const autocomplete_country in this.autocomplete_locations) {
+					if (autocomplete_country == this.new_location.country.text) {
+						for (const city_id in this.autocomplete_locations[autocomplete_country]) {
+							let autocomplete_city = this.autocomplete_locations[autocomplete_country][city_id];
 
-							if (city.toLowerCase().startsWith(city.toLowerCase())) {
-								if (city.toLowerCase() == city.toLowerCase()) {
+							if (autocomplete_city.toLowerCase().startsWith(city.toLowerCase())) {
+								if (autocomplete_city.toLowerCase() == city.toLowerCase()) {
 									// Set city complete prop to true
 									this.new_location.city.complete = true;
 
@@ -257,10 +257,10 @@ export default {
 								}
 
 								let start_index = city.length;
-								let end_index = city.length;
+								let end_index = autocomplete_city.length;
 
 								// Change city input
-								this.new_location.city.text = city + city.slice(start_index, end_index);
+								this.new_location.city.text = city + autocomplete_city.slice(start_index, end_index);
 
 								// Select autocompletion part of country input so user can change it in case of not matching
 								setTimeout(() => {
