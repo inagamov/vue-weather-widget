@@ -203,7 +203,7 @@ export default {
 			this.new_location.country.complete = false;
 
 			// Country input value
-			const country = this.new_location.country.text.trim();
+			const country = this.new_location.country.text;
 
 			// Country input is not empty
 			if (!this.isEmptyOrSpaces(country)) {
@@ -239,7 +239,7 @@ export default {
 			this.new_location.city.complete = false;
 
 			// City input value
-			const city = this.new_location.city.text.trim();
+			const city = this.new_location.city.text;
 
 			// Country & city inputs are not empty
 			if (!this.isEmptyOrSpaces(this.new_location.country.text) && !this.isEmptyOrSpaces(city)) {
