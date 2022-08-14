@@ -8,10 +8,10 @@ module.exports = defineConfig({
 		short_name: "vue-weather-widget",
 		display: "standalone",
 		start_url: ".",
-		themeColor: "#000000",
-		msTileColor: "#000000",
+		themeColor: "#ffffff",
+		msTileColor: "#ffffff",
 		appleMobileWebAppCapable: "yes",
-		appleMobileWebAppStatusBarStyle: "black",
+		appleMobileWebAppStatusBarStyle: "white",
 
 		workboxOptions: {
 			skipWaiting: true,
