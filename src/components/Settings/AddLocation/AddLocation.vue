@@ -156,22 +156,24 @@ export default {
 			// Clear error data
 			this.new_location.error = null;
 
-			if (!event.ctrlKey) {
-				// On any key, except
-				if (!this.isInArray(event.keyCode, [8, 37, 13, 39, 16, 17, 18])) {
-					this.countryAutocomplete();
-				}
+			if (event.ctrlKey || event.keyCode == 32) {
+				return;
+			}
 
-				// On backspace
-				if (this.isInArray(event.keyCode, [8])) {
-					// Clear country complete prop
-					this.new_location.country.complete = false;
-				}
+			// On any key, except
+			if (!this.isInArray(event.keyCode, [8, 37, 13, 39, 16, 17, 18])) {
+				this.countryAutocomplete();
+			}
 
-				// On "Enter" or "Esc"
-				if (this.isInArray(event.keyCode, [13, 27])) {
-					document.getSelection().removeAllRanges();
-				}
+			// On backspace
+			if (event.keyCode == 8) {
+				// Clear country complete prop
+				this.new_location.country.complete = false;
+			}
+
+			// On "Enter" or "Esc"
+			if (event.keyCode == 13 || event.keyCode == 27) {
+				document.getSelection().removeAllRanges();
 			}
 		},
 
@@ -179,22 +181,24 @@ export default {
 			// Clear error data
 			this.new_location.error = null;
 
-			if (!event.ctrlKey) {
-				// On any key, except
-				if (!this.isInArray(event.keyCode, [8, 37, 13, 39, 16, 17, 18])) {
-					this.cityAutocomplete();
-				}
+			if (event.ctrlKey || event.keyCode == 32) {
+				return;
+			}
 
-				// On backspace
-				if (this.isInArray(event.keyCode, [8])) {
-					// Clear city complete prop
-					this.new_location.city.complete = false;
-				}
+			// On any key, except
+			if (!this.isInArray(event.keyCode, [8, 37, 13, 39, 16, 17, 18])) {
+				this.cityAutocomplete();
+			}
 
-				// On "Enter" or "Esc"
-				if (this.isInArray(event.keyCode, [13, 27])) {
-					document.getSelection().removeAllRanges();
-				}
+			// On backspace
+			if (event.keyCode == 8) {
+				// Clear city complete prop
+				this.new_location.city.complete = false;
+			}
+
+			// On "Enter" or "Esc"
+			if (event.keyCode == 13 || event.keyCode == 27) {
+				document.getSelection().removeAllRanges();
 			}
 		},
 
