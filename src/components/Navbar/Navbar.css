@@ -29,8 +29,8 @@
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	width: 100%;
-	border: 1px solid #edebe9;
-	background: rgba(255, 255, 255, 0.8);
+	border: 1px solid var(--accent-color);
+	background: var(--background-color-blurred);
 	-webkit-backdrop-filter: blur(8px);
 	backdrop-filter: blur(8px);
 	border-radius: 20px;
@@ -48,6 +48,7 @@
 	max-height: 20px;
 	margin: auto 0;
 	margin-left: 20px;
+	fill: var(--text-color);
 	cursor: pointer;
 	-webkit-animation: rotation 10s infinite ease-in-out;
 	animation: rotation 10s infinite ease-in-out;

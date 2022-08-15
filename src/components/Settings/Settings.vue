@@ -17,6 +17,7 @@
 			</svg>
 
 			<!-- Body -->
+			<ColorScheme></ColorScheme>
 			<LocationsList></LocationsList>
 			<AddLocation></AddLocation>
 		</div>
@@ -26,11 +27,13 @@
 <script>
 import AddLocation from "./AddLocation/AddLocation.vue";
 import LocationsList from "./LocationsList/LocationsList.vue";
+import ColorScheme from "./ColorScheme/ColorScheme.vue";
 
 export default {
 	components: {
 		AddLocation,
 		LocationsList,
+		ColorScheme,
 	},
 
 	methods: {

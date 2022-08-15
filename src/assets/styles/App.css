@@ -24,6 +24,24 @@ input[type="number"] {
 	-moz-appearance: textfield;
 }
 
+/* Color schemes */
+[data-color-scheme="dark"] {
+	--background-color-primary: #010409;
+	--background-color-secondary: #0d1117;
+	--background-color-blurred: rgba(0, 0, 0, 0.8);
+	--accent-color: #171b22;
+	--text-color: #ffffff;
+	--text-color-hover: #9a9a9a;
+}
+[data-color-scheme="light"] {
+	--background-color-primary: #ffffff;
+	--background-color-secondary: #edebe9;
+	--background-color-blurred: rgba(255, 255, 255, 0.8);
+	--accent-color: #e0e0e0;
+	--text-color: #000000;
+	--text-color-hover: #9a9a9a;
+}
+
 /* Defaults */
 * {
 	margin: 0;
@@ -56,6 +74,8 @@ body {
 body {
 	font-family: "Montserrat", sans-serif;
 	line-height: 1.4;
+	background: var(--background-color-primary);
+	color: var(--text-color);
 }
 
 .app {

@@ -27,7 +27,7 @@
 	left: 10px;
 	width: 20px;
 	height: 20px;
-	fill: #000000;
+	fill: var(--text-color);
 	-webkit-transition: 0.275s;
 	-o-transition: 0.275s;
 	transition: 0.275s;
@@ -48,7 +48,9 @@
 	height: 40px;
 	padding: 5px 10px;
 	padding-left: 40px;
-	border: 1px solid #edebe9;
+	border: 1px solid var(--accent-color);
+	background: var(--background-color-primary);
+	color: var(--text-color);
 	border-radius: 10px;
 	font-size: 16px;
 	-webkit-transition: 0.275s;
@@ -57,7 +59,7 @@
 }
 
 .settings__content__new_location__input:focus {
-	border: 1px solid #000000;
+	border: 1px solid var(--text-color);
 }
 
 .settings__content__new_location__input__complete,
@@ -158,9 +160,9 @@
 	width: 40px;
 	border-radius: 10px;
 	background: transparent;
-	border: 1px solid #000000;
+	border: 1px solid var(--text-color);
 
-	color: #000000;
+	color: var(--text-color);
 	font-size: 20px;
 
 	cursor: pointer;
@@ -170,8 +172,8 @@
 }
 
 .settings__content__new_location__button:disabled {
-	border: 1px solid #edebe9;
-	color: #edebe9;
+	border: 1px solid var(--accent-color);
+	color: var(--accent-color);
 	cursor: no-drop;
 }
 

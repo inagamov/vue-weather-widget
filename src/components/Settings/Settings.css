@@ -105,7 +105,11 @@
 	width: 460px;
 	max-height: 80%;
 
-	background: #fff;
+	background: var(--background-color-primary);
+	-webkit-transition: 0.275s;
+	-o-transition: 0.275s;
+	transition: 0.275s;
+
 	border-radius: 20px;
 	padding: 20px;
 
@@ -113,7 +117,6 @@
 	overflow-x: hidden;
 
 	-webkit-animation: fadeIn_slideUp 0.275s ease-in-out;
-
 	animation: fadeIn_slideUp 0.275s ease-in-out;
 }
 
@@ -136,6 +139,7 @@
 
 	width: 20px;
 	height: 20px;
+	fill: var(--text-color);
 
 	cursor: pointer;
 	-webkit-transition: 0.275s;
