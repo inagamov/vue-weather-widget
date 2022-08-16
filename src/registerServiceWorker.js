@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 		updatefound() {
 			console.log("New content is downloading.");
 		},
-		updated() {
+		updated(registration) {
 			console.log("New content is available. The page will be refreshed automatically.");
 			document.dispatchEvent(new CustomEvent("swUpdated", {detail: registration}));
 		},
